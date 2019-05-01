@@ -16,7 +16,7 @@ function time() {
 	document.getElementById('hours-left').innerHTML=thour;
 	document.getElementById('minutes-left').innerHTML=tmin;
 	document.getElementById('seconds-left').innerHTML=tsec;
-	window.setTimeout("time()",500);
+	window.setTimeout("time()",1000);
 }
 
 time();
