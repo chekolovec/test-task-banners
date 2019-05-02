@@ -212,7 +212,10 @@
 }
 
 .button-pink {
-  background: #eb517a;
+  background: #ff0072;
+}
+.button-pink:hover {
+  background: #fc4a9a;
 }
 
 @media (max-width: 1130px) {
