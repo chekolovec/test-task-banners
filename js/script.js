@@ -1,7 +1,6 @@
 var timeend= new Date();
 timeend.setDate(timeend.getDate() + 1);
 timeend.setHours(0, 0, 0);
-console.log(timeend);
 // IE и FF по разному отрабатывают getYear()
 // timeend= new Date(timeend.getYear()>1900?(timeend.getYear()+1):(timeend.getYear()+1901),0,1);
 // для задания обратного отсчета до определенной даты укажите дату в формате:
@@ -18,8 +17,12 @@ function time() {
 	if (today > 0){
 		thour += today*24;
 	};
-
-	document.getElementById('hours-left').innerHTML=thour;
+	
+	if(thour < 10) {
+		document.getElementById('hours-left').innerHTML='0'+thour;
+	} else {
+		document.getElementById('hours-left').innerHTML=thour;		
+	}
 	document.getElementById('minutes-left').innerHTML=tmin;
 	document.getElementById('seconds-left').innerHTML=tsec;
 	window.setTimeout("time()",1000);
